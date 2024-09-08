@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Hospital Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Delhi Hospital Appointment</h2>
+        <form id="appointment-form" action="#" method="POST">
+            <!-- Slide 1 -->
+            <div class="form-slide active-slide" id="slide-1">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                    <small class="error-message">Full Name is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <small class="error-message">Valid Email is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <small class="error-message">Phone Number is required.</small>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button type="button" class="next-button">Next</button>
+                </div>
+
+                <p class="other-appointment">
+                    <a href="#" id="book-someone-else">Book an appointment for someone else</a>
+                </p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="form-slide hidden" id="slide-2">
+                <div class="form-group">
+                    <label for="hospital">Search Hospital <span class="required">*</span></label>
+                    <input type="text" id="hospital" name="hospital" placeholder="Enter hospital name" autocomplete="off" required>
+                    <div class="suggestions" id="suggestions"></div>
+                    <small class="error-message">Hospital selection is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department <span class="required">*</span></label>
+                    <select id="department" name="department" required>
+                        <option value="" disabled selected>Select a Department</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="gynecology">Gynecology</option>
+                        <option value="dermatology">Dermatology</option>
+                    </select>
+                    <small class="error-message">Department selection is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Appointment Date <span class="required">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                    <small class="error-message">Appointment Date is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="time-slot">Available Time Slots <span class="required">*</span></label>
+                    <select id="time-slot" name="time-slot" required>
+                        <option value="" disabled selected>Select a time slot</option>
+                    </select>
+                    <small class="error-message">Time Slot selection is required.</small>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button type="button" class="prev-button">Previous</button>
+                    <button type="button" class="next-button">Next</button>
+                </div>
+
+                <p class="other-appointment">
+                    <a href="#" id="book-someone-else-2">Book an appointment for someone else</a>
+                </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="form-slide hidden" id="slide-3">
+                <div class="form-group">
+                    <label for="abha-id">ABHA ID (if available)</label>
+                    <input type="text" id="abha-id" name="abha-id" placeholder="Optional">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any specific concerns or requests?"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="save-details" name="save-details">
+                    <label for="save-details">Save my details for future appointments</label>
+                    <i class="fas fa-info-circle" title="Your details will be saved for your future use."></i>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button type="button" class="prev-button">Previous</button>
+                    <button type="submit" class="submit-button">Book Appointment</button>
+                </div>
+
+                <p class="other-appointment">
+                    <a href="#" id="book-someone-else-3">Book an appointment for someone else</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
